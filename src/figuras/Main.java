@@ -1,6 +1,7 @@
-
 package figuras;
+
 public class Main extends javax.swing.JFrame {
+
     private int figure;
 
     public Main() {
@@ -10,7 +11,6 @@ public class Main extends javax.swing.JFrame {
         lblAltura.setVisible(false);
         txtAltura.setVisible(false);
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -216,11 +216,19 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDibujarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDibujarActionPerformed
-       Circulo circulo;
-       circulo = new Circulo(Integer.parseInt(txtRadio.getText()));
-       txtPerimetro.setText(Float.toString(circulo.Perimetro()));
-       txtArea.setText(Float.toString(circulo.Area()));
-       circulo.drawFigure(pnlCanvas.getGraphics());
+        Circulo circulo;
+        Triangulo triangulo;
+        if (figure == 0) {
+            circulo = new Circulo(Integer.parseInt(txtRadio.getText()));
+            txtPerimetro.setText(Float.toString(circulo.Perimetro()));
+            txtArea.setText(Float.toString(circulo.Area()));
+            circulo.drawFigure(pnlCanvas.getGraphics());
+        } else if (figure == 1) {
+            triangulo = new Triangulo(Integer.parseInt(txtRadio.getText()), Integer.parseInt(txtAltura.getText()));
+            txtPerimetro.setText(Float.toString(triangulo.Perimetro()));
+            txtArea.setText(Float.toString(triangulo.Area()));
+            triangulo.drawFigure(pnlCanvas.getGraphics());
+        }
     }//GEN-LAST:event_btnDibujarActionPerformed
 
     private void mnuFigurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuFigurasActionPerformed
@@ -232,8 +240,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_mniCuadradoActionPerformed
 
     private void mniCirculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCirculoActionPerformed
-        if(evt.getSource().equals(mniCirculo)){
-            figure=0;
+        if (evt.getSource().equals(mniCirculo)) {
+            figure = 0;
             lblAltura.setVisible(false);
             txtAltura.setVisible(false);
             lblRadio.setText("Radio");
