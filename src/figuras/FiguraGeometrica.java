@@ -2,7 +2,7 @@ package figuras;
 
 import java.awt.Graphics;
 
-public abstract class FigurasGeometricas {
+public abstract class FiguraGeometrica {
 
     static float area;
     static float perimetro;

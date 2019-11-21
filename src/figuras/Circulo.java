@@ -3,7 +3,7 @@ package figuras;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 
-public class Circulo extends FigurasGeometricas {
+public class Circulo extends FiguraGeometrica {
 
     private static int radio;
     private static JFrame frame;
