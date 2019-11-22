@@ -1,6 +1,7 @@
-
 package figuras;
+
 public class Main extends javax.swing.JFrame {
+
     private int figure;
 
     public Main() {
@@ -10,7 +11,6 @@ public class Main extends javax.swing.JFrame {
         lblAltura.setVisible(false);
         txtAltura.setVisible(false);
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -58,7 +58,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(pnlParametrosLayout.createSequentialGroup()
                         .addComponent(lblRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
-                        .addComponent(txtRadio, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE))
+                        .addComponent(txtRadio, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
                     .addGroup(pnlParametrosLayout.createSequentialGroup()
                         .addComponent(lblAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -69,17 +69,18 @@ public class Main extends javax.swing.JFrame {
             pnlParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlParametrosLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
+                .addGroup(pnlParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtRadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(pnlParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlParametrosLayout.createSequentialGroup()
-                        .addComponent(lblRadio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(13, 13, 13))
-                    .addGroup(pnlParametrosLayout.createSequentialGroup()
-                        .addComponent(txtRadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(19, 19, 19)
                         .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(pnlParametrosLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lblAltura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         btnDibujar.setText("Dibujar");
@@ -103,26 +104,26 @@ public class Main extends javax.swing.JFrame {
             pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlOperacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPerimetro)
-                    .addComponent(lblArea))
+                .addGroup(pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblPerimetro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtPerimetro, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
                     .addComponent(txtArea))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         pnlOperacionesLayout.setVerticalGroup(
             pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlOperacionesLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPerimetro)
-                    .addComponent(txtPerimetro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblArea)
-                    .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtPerimetro)
+                    .addComponent(lblPerimetro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGroup(pnlOperacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtArea)
+                    .addComponent(lblArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -132,7 +133,7 @@ public class Main extends javax.swing.JFrame {
         pnlCanvas.setLayout(pnlCanvasLayout);
         pnlCanvasLayout.setHorizontalGroup(
             pnlCanvasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 187, Short.MAX_VALUE)
+            .addGap(0, 338, Short.MAX_VALUE)
         );
         pnlCanvasLayout.setVerticalGroup(
             pnlCanvasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,6 +167,11 @@ public class Main extends javax.swing.JFrame {
 
         mniTriangulo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
         mniTriangulo.setText("Triangulo");
+        mniTriangulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniTrianguloActionPerformed(evt);
+            }
+        });
         mnuFiguras.add(mniTriangulo);
 
         mnbMain.add(mnuFiguras);
@@ -186,49 +192,56 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pnlOperaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
                                 .addComponent(btnDibujar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(btnBorrar)))))
-                .addGap(18, 18, 18)
-                .addComponent(pnlCanvas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(pnlCanvas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(59, 59, 59)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(pnlCanvas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(pnlParametros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnDibujar)
-                            .addComponent(btnBorrar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(pnlOperaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(pnlParametros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDibujar)
+                    .addComponent(btnBorrar))
+                .addGap(36, 36, 36)
+                .addComponent(pnlOperaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(pnlCanvas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDibujarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDibujarActionPerformed
-       Circulo circulo;
-       Cuadrado cuadrado;
-       if(figure == 0){
-           circulo = new Circulo(Integer.parseInt(txtRadio.getText()));
-           txtPerimetro.setText(Float.toString(circulo.Perimetro()));
-           txtArea.setText(Float.toString(circulo.Area()));
-           circulo.drawFigure(pnlCanvas.getGraphics());
-       }else if(figure == 1){
-           cuadrado = new Cuadrado(Integer.parseInt(txtRadio.getText()));
-           txtPerimetro.setText(Float.toString(cuadrado.Perimetro()));
-           txtArea.setText(Float.toString(cuadrado.Area()));
-           cuadrado.drawFigure(pnlCanvas.getGraphics());
-       }
+        Circulo circulo;
+        Triangulo triangulo;
+        Cuadrado cuadrado;
+        if (figure == 0) {
+            circulo = new Circulo(Integer.parseInt(txtRadio.getText()));
+            txtPerimetro.setText(Float.toString(circulo.Perimetro()));
+            txtArea.setText(Float.toString(circulo.Area()));
+            circulo.drawFigure(pnlCanvas.getGraphics());
+        } else if (figure == 1) {
+            cuadrado = new Cuadrado(Integer.parseInt(txtRadio.getText()));
+            txtPerimetro.setText(Float.toString(cuadrado.Perimetro()));
+            txtArea.setText(Float.toString(cuadrado.Area()));
+            cuadrado.drawFigure(pnlCanvas.getGraphics());
+        } else if (figure == 2) {
+            triangulo = new Triangulo(Integer.parseInt(txtRadio.getText()), Integer.parseInt(txtAltura.getText()));
+            txtPerimetro.setText(Float.toString(triangulo.Perimetro()));
+            txtArea.setText(Float.toString(triangulo.Area()));
+            triangulo.drawFigure(pnlCanvas.getGraphics());
+        }
+
     }//GEN-LAST:event_btnDibujarActionPerformed
 
     private void mnuFigurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuFigurasActionPerformed
@@ -236,17 +249,17 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuFigurasActionPerformed
 
     private void mniCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCuadradoActionPerformed
-        if(evt.getSource().equals(mniCuadrado)){
-        figure = 1;
-        lblAltura.setVisible(false);
-        txtAltura.setVisible(false);
-        lblRadio.setText("Lado");
+        if (evt.getSource().equals(mniCuadrado)) {
+            figure = 1;
+            lblAltura.setVisible(false);
+            txtAltura.setVisible(false);
+            lblRadio.setText("Lado");
         }
     }//GEN-LAST:event_mniCuadradoActionPerformed
 
     private void mniCirculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCirculoActionPerformed
-        if(evt.getSource().equals(mniCirculo)){
-            figure=0;
+        if (evt.getSource().equals(mniCirculo)) {
+            figure = 0;
             lblAltura.setVisible(false);
             txtAltura.setVisible(false);
             lblRadio.setText("Radio");
@@ -254,6 +267,14 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mniCirculoActionPerformed
 
+    private void mniTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrianguloActionPerformed
+ if (evt.getSource().equals(mniTriangulo)) {
+            figure = 2;
+            lblAltura.setVisible(true);
+            txtAltura.setVisible(true);
+            lblRadio.setText("Base");
+    }//GEN-LAST:event_mniTrianguloActionPerformed
+    }
     /**
      * @param args the command line arguments
      */
